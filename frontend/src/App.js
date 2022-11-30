@@ -5,14 +5,14 @@ import axios from 'axios';
 import { map } from 'lodash';
 import './App.css';
 
-const BACKEND_BASE_URL = "http://localhost:3001/movies/";
+const BACKEND_BASE_URL = "https://api-formula-1.p.rapidapi.com/drivers";
 
 export default class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      movies: [],
+      drivers: [],
       addFilmInputValue: ''
     }
   }
@@ -28,7 +28,7 @@ export default class App extends React.Component {
   };
 
   getList = () => {
-    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.movies && this.setState({ movies: data.data.movies }));
+    axios.get(BACKEND_BASE_URL).then((data) => data.data && data.data.drivers && this.setState({ drivers: data.data.movies }));
   }
 
   addMovie = () => {
@@ -46,7 +46,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { movies, addFilmInputValue } = this.state;
+    const { drivers, addFilmInputValue } = this.state;
 
     return (
       <div>
@@ -63,7 +63,7 @@ export default class App extends React.Component {
         </div>
 
         <div className='movies'>
-          {map(movies, (movie, index) => <Movie key={`movie-${index}`} infos={movie} deleteMovie={this.deleteMovie} />)}
+          {map(drivers, (movie, index) => <Movie key={`movie-${index}`} infos={movie} deleteMovie={this.deleteMovie} />)}
         </div>
       </div>
     )
