@@ -1,0 +1,86 @@
+#login {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 30%;
+    height: 500px;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-radius: 2px 6px;
+    border-radius: 10%;
+    background: linear-gradient(to left, transparent, 50%, rgba(255, 255, 255, 0.134), );
+}
+
+#disposition {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cercle {
+    width: 200px;
+    height: 200px;
+    border-radius: 140px;
+    text-align: center;
+    background-color: rgb(202, 203, 203, 5%);
+    box-shadow: 10px 10px 1.5em black;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    border: solid;
+    border-color: white;
+    border-width: 0.5px;
+    background: url(../../assets/img/toto.jpg) center/cover;
+}
+
+#text {
+
+    margin-bottom: 5%;
+    margin-left: -28%;
+    border-width: 2px 8px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: rgb(202, 203, 203, 5%);
+    box-shadow: 10px 10px 1.5em black;
+}
+
+.button {
+
+    color: black;
+    width: 18%;
+    text-align: center;
+    box-shadow: 10px 10px 1.5em black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(0, 161, 156);
+}
+
+.button1:hover {
+    background-color: rgb(0, 161, 156);
+    color: white;
+}
+
+h2 {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 5%;
+}
+
+h1 {
+
+    display: flex;
+    justify-content: center;
+}

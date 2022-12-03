@@ -9,7 +9,7 @@ const router = express.Router();
 let drivers = [];
 
 // On insère un film initial
-const movie = "georges66";
+const movie = "georges";
 const url = `https://api-formula-1.p.rapidapi.com/driverssearch=${movie}`;
 
 // Make a request for a movie

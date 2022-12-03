@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    //  overflow: hidden;
+
+}
+
+#taille {
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    //background-image: url(../../assets/img/fondG.png);
+
+    background-color: aqua;
+}
+
+#taille {
+
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    //background-image: url(../../assets/img/fondG.png);
+
+    background-color: aqua;
+}
+
+#persoG {
+
+    position: absolute;
+    max-width: 42%;
+    max-height: 100%;
+    margin-left: 50%;
+    margin-top: 3.3%;
+    filter: drop-shadow(0px 0px 1em rgb(0, 161, 156));
+
+}
+
+#persoL {
+
+    position: absolute;
+    max-width: 63%;
+    max-height: 100%;
+    margin-right: 53%;
+    margin-top: 4.2%;
+    filter: drop-shadow(0px 0px 1em rgb(0, 161, 156));
+
+
+}
