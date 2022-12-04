@@ -52,16 +52,20 @@ const Dashboards = () => {
                 </div>
 
 
+                <Widget4>
+                </Widget4>
 
-                <Widget3>
-                </Widget3>
+
 
             </div>
 
             <div id='disposition'>
 
-                <Widget2>
-                </Widget2>
+
+
+                <Widget3>
+                </Widget3>
+
                 <Widget7>
                 </Widget7>
 
@@ -69,9 +73,9 @@ const Dashboards = () => {
 
             <div id='disposition'>
 
-                <Widget4>
-                </Widget4>
 
+                <Widget2>
+                </Widget2>
 
             </div>
 

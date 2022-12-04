@@ -1,65 +1,87 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Line, Doughnut, Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, ArcElement, Tooltip, Legend, } from 'chart.js';
+import { affichagewins } from '../drivers';
+import { affichagedonut } from '../drivers';
+
+ChartJS.register(ArcElement, Tooltip, Legend)
+
+ChartJS.register(
+    LineElement,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+
+)
 
 
-//http://ergast.com/api/f1/drivers/russell/driverStandings.json
+const Widget7 = () => {
+
+    const [newdata, setNewdata] = useState([]);
 
 
+    const fetchApi = async () => {
+
+        const newdata = await affichagewins();
+        setNewdata(newdata);
+        console.log(newdata);
+
+    };
+
+    useEffect(() => {
+
+        fetchApi();
+
+    }, []);
 
 
+    const datas = {
+
+        labels: newdata.map((data) => data[0].year),
+
+        datasets: [{
+            label: "Wins",
+            data: newdata.map((data) => data[0].value),
+            //data: ["8", "12", "3", "9", "8", "12", "9"],
+            backgroundColor: 'rgb(0, 161, 156)',
+            borderColor: 'rgb(0, 161, 156)',
+            with: '100%',
+            height: '100%',
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1,
+
+        }
+        ]
+    };
+
+    const options = {};
 
 
-class Widget7 extends React.Component {
+    return (
+        <div id='formw7' >
+            <h1 className="liste"> Number Wins </h1>
 
-    constructor() {
-        super();
-        this.state = {
-            items: []
-        };
-    }
-
-    componentDidMount() {
-        fetch("http://ergast.com/api/f1/drivers/russell/driverStandings.json")
-            .then(res => res.json())
-            .then(drivers => this.setState({ items: drivers.MRData.StandingsTable.StandingsLists }))
-        // .then(drivers => console.log(drivers.MRData.StandingsTable.StandingsLists))
-
-        // .then(drivers => this.map.set({ items: drivers.MRData.DriverTable.Drivers })) 
-    }
+            <Doughnut className='donuts' data={datas} options={options}> </Doughnut>
 
 
-    render() {
+        </div >
+    );
 
-        return (
-            <div id='formw1bis' >
-                <h1 className="liste"> Standings </h1>
-
-                <div className="orgaw1">
-
-                    {this.state.items.map(items =>
-
-                        items.DriverStandings.map(driver =>
-
-                            <li className="liste" key={items.id} >
-
-
-                                <br></br>
-                                Season: {items.season} <br></br>
-                                Position de {driver.Driver.givenName}  {driver.Driver.familyName} : <p> {driver.position} e</p>
-
-                                {/* {items.nationality} */}
-
-                            </li>
-
-                        )
-
-                    )
-                    }
-                </div >
-
-
-            </div >
-        );
-    }
 };
 
 export default Widget7;

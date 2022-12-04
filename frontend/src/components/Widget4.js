@@ -43,7 +43,7 @@ const Widget4 = () => {
         labels: newdata.map((data) => data[0].year),
 
         datasets: [{
-            label: "test",
+            label: "Classement",
             data: newdata.map((data) => data[0].value),
             //data: ["8", "12", "3", "9", "8", "12", "9"],
             backgroundColor: 'rgb(0, 161, 156)',
@@ -77,6 +77,9 @@ const Widget4 = () => {
 
     return (
         <div id="formw3">
+
+            <p className="liste"> Standing Evolution (year)  </p>
+
 
             <Line data={datas} options={options}> </Line>
             {/* <Doughnut data={data} options={options}> </Doughnut> */}

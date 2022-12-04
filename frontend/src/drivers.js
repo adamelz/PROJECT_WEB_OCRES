@@ -25,7 +25,7 @@ export const affichagestanding = async () => {
 
 
 
-    const { data } = await axios.get("http://ergast.com/api/f1/drivers/hamilton/driverStandings.json")
+    const { data } = await axios.get("http://ergast.com/api/f1/drivers/russell/driverStandings.json")
     const modif = data.MRData.StandingsTable.StandingsLists.map(test =>
 
         test.DriverStandings.map(driver =>
@@ -42,24 +42,42 @@ export const affichagestanding = async () => {
 
 }
 
-{/* <div className="orgaw1">
-
-{this.state.items.map(items =>
-
-    items.DriverStandings.map(driver =>
-
-        <li className="liste" key={items.id} >
+export const affichagewins = async () => {
 
 
-            <br></br>
-            Season: {items.season} <br></br>
-            Position de {driver.Driver.givenName}  {driver.Driver.familyName} : <p> {driver.position} e</p>
 
+    const { data } = await axios.get("http://ergast.com/api/f1/drivers/russell/driverStandings.json")
+    const modif = data.MRData.StandingsTable.StandingsLists.map(test =>
 
-        </li>
+        test.DriverStandings.map(driver =>
 
+        ({
+            value: driver.wins,
+            year: test.season,
+        }))
     )
+        ;
 
-)
+    return modif;
+
 }
-</div > */}
+
+export const affichage = async () => {
+
+
+
+    const { data } = await axios.get("http://ergast.com/api/f1/2022/results.json")
+    const modif = data.MRData.StandingsTable.StandingsLists.map(test =>
+
+        test.DriverStandings.map(driver =>
+
+        ({
+            value: driver.wins,
+            year: test.season,
+        }))
+    )
+        ;
+
+    return modif;
+
+}
