@@ -14,27 +14,11 @@ console.log(image);
 console.log(imag);
 
 
-function profil(a) {
-
-    let result = ' ';
-
-    if (a > 0) {
-        result = 'Georgeee';
-    }
-    else {
-        result = 'Lewiss';
-    }
-
-    //alert(result);
-    console.log(result);
-
-    return result;
-
-}
 
 
 
-const Slider = () => {
+
+class Slider extends React.Component {
 
     //     let [Name, setname] = useState('');
 
@@ -77,72 +61,100 @@ const Slider = () => {
     // }
 
     /*  Initial State */
-    const [Name, setName] = useState('George Russell', '');
-    const [count, setCount] = useState(0);
-    const [num, setNume] = useState();
+
+    constructor(props) {
+        super(props);
+        this.state = {
+
+            value: '',
+            name: 'George Russell'
+        };
+    }
 
     /* The handleChange() function to set a new state for input */
 
 
-    function handleChange() {
-        //setname(event.value);
-        setNume(num + 1);
 
-        if (num % 2 == 0) {
-            setName("George Russel");
+
+    handleChange(props) {
+
+        this.setState({ value: props });
+        console.log(this.state.value)
+
+        if (this.state.value % 2 == 0) {
+            this.setState({ name: "Lewis Hamilton" });
         }
         else {
 
-            setName("Lewis Hamilton");
+            this.setState({ name: "George Russell" });
         }
+        const nom = this.state.name;
+
+        return nom;
+
+    };
 
 
-        return console.log(Name);
-    }
-
-    useEffect(() => {
-
-        handleChange();
-        // document.title = `You clicked ${count} times`;
-        // alert(count);
-    });
 
 
-    return (
-        <>
 
-            <form>
+    // function handleChange(event) {
 
-                <div>
+    //     // setNume(e.target.value);
+    //     console.log(event.target.value)
 
-                    <Carousel onChange={e => handleChange()}>
+    //     if (num % 2 == 0) {
+    //         setName("George Russel");
+    //     }
+    //     else {
 
-                        <div type="radio" id="taille" >
-
-                            <img src={ima} alt="" />
-                            <img id="persoG" src={image} alt="" />
+    //         setName("Lewis Hamilton");
+    //     }
 
 
-                        </div>
-                        <div type="radio" id="taille" >
-                            <img src={im} alt="" />
-                            <img id="persoL" src={imag} alt="" />
+    //     return console.log(Name);
+    // }
 
-                        </div>
 
-                    </Carousel >
-                    <h1>Dashboard of  &nbsp; <span > {Name}</span></h1>
+    render() {
 
-                </div>
-                {/* <div>
+        return (
+            <>
+
+                <form>
+
+                    <div>
+
+
+                        <Carousel onChange={number => this.handleChange(number)}>
+
+                            <div type="radio" id="taille" >
+
+                                <img src={ima} alt="" />
+                                <img id="persoG" src={image} alt="" />
+
+
+                            </div>
+                            <div type="radio" id="taille" >
+                                <img src={im} alt="" />
+                                <img id="persoL" src={imag} alt="" />
+
+                            </div>
+
+                        </Carousel >
+                        <h1>Dashboard of  &nbsp; <span > {this.state.name}</span></h1>
+
+                    </div>
+                    {/* <div>
                     <p>You clicked {count} times</p>
                     <button onClick={() => setCount(count + 1)}>
                         Click me
                     </button>
                 </div> */}
-            </form>
-        </>
-    )
+                </form>
+            </>
+        )
+    }
 }
 
 
