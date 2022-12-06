@@ -24,7 +24,7 @@ class Widget3 extends React.Component {
 
     render() {
         return (
-            <div id='formw2'>
+            <div id='formw7'>
 
                 <h1>  Speed Last race</h1>
 

@@ -13,6 +13,7 @@ import Widget8 from './Widget8';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import jsxToString from 'jsx-to-string';
 import afficher from './Slider';
+import Widget9 from './Widget9';
 
 
 console.log(image);
@@ -62,6 +63,8 @@ const Dashboards = () => {
             <div id='disposition'>
 
 
+                <Widget2>
+                </Widget2>
 
                 <Widget3>
                 </Widget3>
@@ -69,15 +72,12 @@ const Dashboards = () => {
                 <Widget7>
                 </Widget7>
 
-            </div>
+                <Widget9>
 
-            <div id='disposition'>
-
-
-                <Widget2>
-                </Widget2>
+                </Widget9>
 
             </div>
+
 
 
 
