@@ -9,58 +9,8 @@ import Dashboard from '../pages/Dashboard';
 import jsxToString from 'jsx-to-string';
 
 
-console.log(ima);
-console.log(image);
-console.log(imag);
-
-
-
-
-
-
 class Slider extends React.Component {
 
-    //     let [Name, setname] = useState('');
-
-    //     const handleChange = (event) => {
-    //         setname(event.target.name);
-    //         console.log(Name);
-    //     }
-
-    //     return (
-
-    //         // <Carousel onChange={(name) => profil(name)} >
-    //         <div>
-    //             <Carousel onChange={handleChange}>
-
-    //                 <div type="radio" id="taille" name={Name}>
-
-    //                     <img src={ima} alt="" />
-    //                     <img id="persoG" src={image} alt="" />
-
-    //                 </div>
-    //                 <div type="radio" id="taille" name={Name}>
-    //                     <img src={im} alt="" />
-    //                     <img id="persoL" src={imag} alt="" />
-
-    //                 </div>
-
-    //             </Carousel >
-
-    //             <div>
-    //                 <h1> Dashboard of {Name} </h1>
-
-    //             </div>
-
-
-    //         </div>
-
-
-    //     );
-
-    // }
-
-    /*  Initial State */
 
     constructor(props) {
         super(props);
@@ -70,11 +20,6 @@ class Slider extends React.Component {
             name: 'George Russell'
         };
     }
-
-    /* The handleChange() function to set a new state for input */
-
-
-
 
     handleChange(props) {
 
@@ -93,28 +38,6 @@ class Slider extends React.Component {
         return nom;
 
     };
-
-
-
-
-
-    // function handleChange(event) {
-
-    //     // setNume(e.target.value);
-    //     console.log(event.target.value)
-
-    //     if (num % 2 == 0) {
-    //         setName("George Russel");
-    //     }
-    //     else {
-
-    //         setName("Lewis Hamilton");
-    //     }
-
-
-    //     return console.log(Name);
-    // }
-
 
     render() {
 
@@ -145,12 +68,7 @@ class Slider extends React.Component {
                         <h1>Dashboard of  &nbsp; <span > {this.state.name}</span></h1>
 
                     </div>
-                    {/* <div>
-                    <p>You clicked {count} times</p>
-                    <button onClick={() => setCount(count + 1)}>
-                        Click me
-                    </button>
-                </div> */}
+
                 </form>
             </>
         )

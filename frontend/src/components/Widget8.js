@@ -22,18 +22,11 @@ class Widget8 extends React.Component {
 
         return (
             <div id='formw1bis' >
-                <h1 className="liste"> Standings Constructor </h1>
+                <h3 className="liste"> Standings Constructor </h3>
 
+                <br></br>
                 <div className='orgaw1'>
-                    {/* slice(7, 8).*/}
 
-                    {/* {this.state.items.map(items =>
-                    <p className="liste" key={items.id} >
-
-                        Pilote {items.Results} :
-
-
-                    </p>)} */}
 
                     {this.state.items.map(items =>
 
@@ -43,11 +36,12 @@ class Widget8 extends React.Component {
 
 
 
-                                Season: {items.season} <br></br>
-                                Name: {driver.Constructor.name}  <br></br>
-                                <h1>{driver.position} e</h1>
+                                Season: {items.season} <br></br><br></br>
+                                <h1 className='data'>{driver.position} e</h1><br></br><br></br>
 
-                                {/* {items.nationality} */}
+
+                                <p id='nameposition'> {driver.Constructor.name}</p>
+
 
                             </p>
 

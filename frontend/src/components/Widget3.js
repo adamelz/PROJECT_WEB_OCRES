@@ -26,13 +26,13 @@ class Widget3 extends React.Component {
         return (
             <div id='formw7'>
 
-                <h1>  Speed Last race</h1>
+                <h2 className="liste"> Speed Last race</h2>
 
                 <div className='orgaw1'>
 
                     {this.state.items.map(items =>
 
-                        items.Results.slice(4, 5).map(driver =>
+                        items.Results.slice(17, 18).map(driver =>
 
 
                             <p className="liste" key={driver.id} >
@@ -40,8 +40,8 @@ class Widget3 extends React.Component {
 
                                 <br></br>
                                 Race: {items.raceName} <br></br>
-                                <h1>{driver.FastestLap.AverageSpeed.speed} </h1> {driver.FastestLap.AverageSpeed.units} in lap <h1>{driver.FastestLap.lap} </h1>
-                                For: {driver.Driver.givenName} {driver.Driver.familyName}
+                                <h1 className='data'>{driver.FastestLap.AverageSpeed.speed} </h1> {driver.FastestLap.AverageSpeed.units} in lap <h1 className='data'>{driver.FastestLap.lap} </h1>
+                                <p id='nameposition'>{driver.Driver.givenName} {driver.Driver.familyName}</p>
 
                             </p>
 

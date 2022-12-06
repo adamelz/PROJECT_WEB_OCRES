@@ -23,32 +23,25 @@ class Widget5 extends React.Component {
     render() {
         return (
             <div id='formw1bis' >
-                <h1 className="liste"> Standings Driver </h1>
+                <h3 className="liste"> Standings Driver </h3>
 
                 <div className='orgaw1'>
-                    {/* slice(7, 8).*/}
-
-                    {/* {this.state.items.map(items =>
-                        <p className="liste" key={items.id} >
-
-                            Pilote {items.Results} :
-
-
-                        </p>)} */}
 
                     {this.state.items.map(items =>
 
-                        items.DriverStandings.slice(3, 4).map(driver =>
+                        items.DriverStandings.slice(5, 6).map(driver =>
 
                             <p className="liste" key={driver.id} >
 
 
+                                <br></br>
 
-                                Season: {items.season} <br></br>
-                                Name: {driver.Driver.givenName}  {driver.Driver.familyName}  <br></br>
-                                <h1>{driver.position} e</h1>
+                                Season: {items.season} <br></br><br></br>
+                                <h1 className='data'>{driver.position} e</h1>
 
-                                {/* {items.nationality} */}
+                                <br></br>
+
+                                <p id='nameposition'> {driver.Driver.familyName}</p>
 
                             </p>
 

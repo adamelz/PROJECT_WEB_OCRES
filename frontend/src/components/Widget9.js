@@ -35,14 +35,20 @@ function Widget9() {
 
     return (
         <div id="formw7">
-            <div className="usersDisplay">
+            <h2 className="liste"> Drivers's weight in (kg) </h2>
+            <div className="liste">
+
+                <br />
                 {listOfUsers.slice(0, 1).map((user) => {
                     return (
                         <div>
-                            <h1>Name: {user.driver}</h1>
-                            <h1>Before: {user.weightbefore}</h1>
-                            <h1>After: {user.weightafter}</h1>
+
+                            <p>Before the race : <h1 className="data">{user.weightbefore}</h1></p>
+                            <p>After the race : <h1 className="data">{user.weightafter}</h1></p>
+
+                            <p id="nameposition">{user.driver}</p>
                         </div>
+
                     );
                 })}
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const lapnum = 58;
+const lapnum = 45;
 
 class Widget6 extends React.Component {
 
@@ -24,24 +24,18 @@ class Widget6 extends React.Component {
 
         return (
             <div id='formw1bis' >
-                <h1 className="liste"> Lap Time </h1>
+                <h3 className="liste"> Lap Time </h3>
 
+                <br></br>
                 <div className='orgaw1'>
-                    {/* slice(7, 8).*/}
-
-                    {/* {this.state.items.map(items =>
-                        <p className="liste" key={items.id} >
-
-                            Pilote {items.Results} :
 
 
-                        </p>)} */}
 
                     {this.state.items.map(items =>
 
                         items.Laps.map(driver =>
 
-                            driver.Timings.slice(4, 5).map(time =>
+                            driver.Timings.slice(2, 3).map(time =>
 
                                 <p className="liste" key={time.id} >
 
@@ -49,8 +43,10 @@ class Widget6 extends React.Component {
 
                                     Race: {items.raceName} <br></br><br></br>
                                     Lap: {driver.number} <br></br><br></br>
-                                    Name: {time.driverId}   <br></br><br></br>
-                                    {time.time} s
+                                    <h1 className="data" > {time.time} s </h1> <br></br><br></br>
+
+
+                                    <p id='nameposition' >{time.driverId} </p>
 
 
                                 </p>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import axios from 'axios';
+import image from '../assets/img/flag.png'
 
 
 
@@ -24,9 +25,10 @@ class Widget2 extends React.Component {
 
     render() {
         return (
-            <div id="formw3">
-                <h1 className="liste"> Nationality </h1>
+            <div id="formw7">
+                <h2 className="liste"> Nationality </h2>
 
+                <br />
                 <div className='orgaw1'>
 
                     {this.state.items.slice(5, 6).map(items =>
@@ -34,11 +36,11 @@ class Widget2 extends React.Component {
 
                         <p className="liste" key={items.id} >
 
-                            {items.nationality}
+                            {items.nationality} <br />
+
+                            <img id="flag" src={image} alt="image" />
 
                         </p>
-
-
 
                     )}
 

@@ -155,25 +155,11 @@ class Widget1 extends React.Component {
 
     render() {
 
-        //     console.log(items);
-
-        //     const { error, isLoaded, items } = this.state;
-
-
         return (
             <div id='formw1bis' >
-                <h1 className="liste"> Last Position </h1>
+                <h3 className="liste"> Last Position </h3>
 
                 <div className='orgaw1'>
-                    {/* slice(7, 8).*/}
-
-                    {/* {this.state.items.map(items =>
-                        <p className="liste" key={items.id} >
-
-                            Pilote {items.Results} :
-
-
-                        </p>)} */}
 
                     {this.state.items.map(items =>
 
@@ -183,10 +169,11 @@ class Widget1 extends React.Component {
 
 
                                 <br></br>
-                                Race: {items.raceName} <br></br>
-                                Position de {driver.Driver.givenName}  {driver.Driver.familyName} : <h1> {driver.position} e</h1>
+                                Race: {items.raceName} <br></br><br></br>
+                                <h1 className='data'> {driver.position} e</h1>
 
-                                {/* {items.nationality} */}
+                                <p id='nameposition'> {driver.Driver.givenName}  {driver.Driver.familyName} </p>
+
 
                             </p>
 
