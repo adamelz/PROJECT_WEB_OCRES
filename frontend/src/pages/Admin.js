@@ -28,6 +28,24 @@ const Admin = () => {
         });
     };
 
+    const deleteUser = () => {
+        Axios.delete("http://localhost:3001/delete", {
+            driver,
+            weightbefore,
+            weightafter,
+        }).then((response) => {
+            setListOfUsers([
+                ...listOfUsers,
+                {
+                    driver,
+                    weightbefore,
+                    weightafter,
+                },
+            ]);
+        });
+    };
+
+
     return (
 
         <div>
@@ -76,13 +94,48 @@ const Admin = () => {
                     }}
                 />
                 <input
-                    type="text"
+                    type="number"
                     placeholder="Weight After..."
                     onChange={(event) => {
                         setUsername(event.target.value);
                     }}
                 />
                 <button onClick={createUser}> Create User </button>
+
+
+            </div>
+
+            <br></br><br></br><br></br>
+
+            <h1> Delete a driver </h1>
+
+            <br></br><br></br><br></br>
+
+            <div id='disposition'>
+                <input
+                    type="text"
+                    placeholder="Driver..."
+                    onChange={(event) => {
+                        setName(event.target.value);
+                    }}
+                />
+                <input
+                    type="number"
+                    placeholder="Weight Before..."
+                    onChange={(event) => {
+                        setAge(event.target.value);
+                    }}
+                />
+                <input
+                    type="number"
+                    placeholder="Weight After..."
+                    onChange={(event) => {
+                        setUsername(event.target.value);
+                    }}
+                />
+                <button onClick={deleteUser}> Delete User </button>
+
+
             </div>
 
         </div >

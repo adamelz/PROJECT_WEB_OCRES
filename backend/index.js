@@ -30,7 +30,7 @@ app.post("/createUser", async (req, res) => {
   res.json(user);
 });
 
-app.delete("/delete/:id", async (req, res) => {
+app.delete("/delete", async (req, res) => {
 
   const id = req.params.id;
 
