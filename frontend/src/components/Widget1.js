@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import React from 'react';
 import axios from 'axios';
-const _ = require('lodash');
-let map = new Map();
 
 
 
@@ -179,7 +177,7 @@ class Widget1 extends React.Component {
 
                     {this.state.items.map(items =>
 
-                        items.Results.slice(4, 5).map(driver =>
+                        items.Results.slice(17, 18).map(driver =>
 
                             <p className="liste" key={driver.id} >
 

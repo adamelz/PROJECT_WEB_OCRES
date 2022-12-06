@@ -25,7 +25,7 @@ export const affichagestanding = async () => {
 
 
 
-    const { data } = await axios.get("http://ergast.com/api/f1/drivers/russell/driverStandings.json")
+    const { data } = await axios.get("http://ergast.com/api/f1/drivers/hamilton/driverStandings.json")
     const modif = data.MRData.StandingsTable.StandingsLists.map(test =>
 
         test.DriverStandings.map(driver =>
@@ -46,7 +46,7 @@ export const affichagewins = async () => {
 
 
 
-    const { data } = await axios.get("http://ergast.com/api/f1/drivers/russell/driverStandings.json")
+    const { data } = await axios.get("http://ergast.com/api/f1/drivers/hamilton/driverStandings.json")
     const modif = data.MRData.StandingsTable.StandingsLists.map(test =>
 
         test.DriverStandings.map(driver =>
