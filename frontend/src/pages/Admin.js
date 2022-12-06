@@ -34,24 +34,31 @@ const Admin = () => {
             <Navigation />
 
 
-            <h1> Page administration </h1>
-            {/* <div id='disposition'>
+            <h1> Login Administration </h1>
+            <div id='disposition'>
 
                 <div id='login'>
                     <div id='cercle'>
                     </div>
-                    <h2> Administrateur </h2>
+                    <h2> Administrator </h2>
 
-                    <div id='text'><input type="text" placeholder='Utilisateur' /></div>
+                    <div id='text'><input type="text" placeholder='Username' /></div>
                     <br />
-                    <div id='text'><input type="password" placeholder='Mot de passe' /></div>
+                    <div id='text'><input type="password" placeholder='Password' /></div>
                     <br />
                     <button class="button button1" > Connect </button>
 
 
-                </div> 
+                </div>
 
-    </div>*/}
+            </div>
+
+            <br></br><br></br><br></br>
+
+            <h1> Add a driver </h1>
+
+            <br></br><br></br><br></br>
+
 
             <div id='disposition'>
                 <input
@@ -63,14 +70,14 @@ const Admin = () => {
                 />
                 <input
                     type="number"
-                    placeholder="Before..."
+                    placeholder="Weight Before..."
                     onChange={(event) => {
                         setAge(event.target.value);
                     }}
                 />
                 <input
                     type="text"
-                    placeholder="After..."
+                    placeholder="Weight After..."
                     onChange={(event) => {
                         setUsername(event.target.value);
                     }}
