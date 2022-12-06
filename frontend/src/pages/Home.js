@@ -23,7 +23,7 @@ const Home = () => {
 
             <br />
 
-            <div>
+            <div id='center'>
 
                 <Dashboards>
                 </Dashboards>

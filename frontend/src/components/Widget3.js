@@ -24,7 +24,7 @@ class Widget3 extends React.Component {
 
     render() {
         return (
-            <div id='formw7'>
+            <div id='w3'>
 
                 <h2 className="liste"> Speed Last race</h2>
 
@@ -39,9 +39,9 @@ class Widget3 extends React.Component {
 
 
                                 <br></br>
-                                Race: {items.raceName} <br></br>
-                                <h1 className='data'>{driver.FastestLap.AverageSpeed.speed} </h1> {driver.FastestLap.AverageSpeed.units} in lap <h1 className='data'>{driver.FastestLap.lap} </h1>
-                                <p id='nameposition'>{driver.Driver.givenName} {driver.Driver.familyName}</p>
+                                Race: <p id='italic'>{items.raceName} </p> <br></br><br></br>
+                                <h1 className='data'>{driver.FastestLap.AverageSpeed.speed} </h1> <br></br>{driver.FastestLap.AverageSpeed.units}  in lap <br></br> <h1 className='data'>{driver.FastestLap.lap} </h1>
+                                {/* <p id='nameposition'>{driver.Driver.givenName} {driver.Driver.familyName}</p> */}
 
                             </p>
 

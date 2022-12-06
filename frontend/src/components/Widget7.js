@@ -73,7 +73,7 @@ const Widget7 = () => {
 
 
     return (
-        <div id='formw7' >
+        <div id='w3' >
             <h2 className="liste"> Number Wins </h2>
 
             <Doughnut className='donuts' data={datas} options={options}> </Doughnut>

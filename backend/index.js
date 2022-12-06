@@ -30,6 +30,14 @@ app.post("/createUser", async (req, res) => {
   res.json(user);
 });
 
+app.delete("/delete/:id", async (req, res) => {
+
+  const id = req.params.id;
+
+  await DriverModel.findByIdAndRemove(id).exec();
+  res.send("deleted");
+})
+
 app.listen(3001, () => {
   console.log("SERVER RUNS PERFECTLY!");
 });

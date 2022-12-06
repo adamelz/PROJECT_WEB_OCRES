@@ -22,7 +22,7 @@ class Widget5 extends React.Component {
 
     render() {
         return (
-            <div id='formw1bis' >
+            <div id='carré' >
                 <h3 className="liste"> Standings Driver </h3>
 
                 <div className='orgaw1'>
@@ -36,12 +36,12 @@ class Widget5 extends React.Component {
 
                                 <br></br>
 
-                                Season: {items.season} <br></br><br></br>
+                                Season: <p id='italic'> {items.season}</p> <br></br><br></br>
                                 <h1 className='data'>{driver.position} e</h1>
 
                                 <br></br>
 
-                                <p id='nameposition'> {driver.Driver.familyName}</p>
+                                {/* <p id='nameposition'> {driver.Driver.familyName}</p> */}
 
                             </p>
 

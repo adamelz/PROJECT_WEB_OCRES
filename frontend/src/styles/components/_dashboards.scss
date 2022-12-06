@@ -10,7 +10,6 @@
 #disposition2 {
 
   display: flex;
-  justify-content: space-around;
 
 
 }
@@ -20,8 +19,8 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  max-width: 100%;
-  //background-color: rgb(21, 21, 21);
+  height: 100%;
+  padding-left: 0;
 
 }
 
@@ -34,19 +33,13 @@
 
 #orga {
 
-  // border-width: 2px 8px;
-  // border-radius: 50px;
-  // margin-left: -1.5%;
-  // margin-right: 2%;
+
   margin-bottom: 10%;
   margin-left: 1%;
-  width: 100% // border: solid;
-    // border-width: 1px;
-    // border-color: white;
-    //background: linear-gradient(to left, transparent, 50%, rgba(255, 255, 255, 0.134), );
-    //background-color: rgb(0, 161, 156);
-    //box-shadow: 20px 20px 1.5em white;
-  ;
+  width: 1200px;
+  height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
 
 
 
@@ -55,4 +48,28 @@
     margin-top: 2%;
     margin-bottom: 2%;
   }
+}
+
+@media screen and (max-width: 900px) {
+
+  .orga {
+
+    width: 90%;
+    font-size: 0.8em;
+
+  }
+
+  .orga p {
+
+    font-size: 0.9em;
+  }
+
+}
+
+#center {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }

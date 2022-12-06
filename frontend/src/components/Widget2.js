@@ -25,7 +25,7 @@ class Widget2 extends React.Component {
 
     render() {
         return (
-            <div id="formw7">
+            <div id="w3">
                 <h2 className="liste"> Nationality </h2>
 
                 <br />
@@ -36,7 +36,7 @@ class Widget2 extends React.Component {
 
                         <p className="liste" key={items.id} >
 
-                            {items.nationality} <br />
+                            <p id='italic'> {items.nationality} </p> <br />
 
                             <img id="flag" src={image} alt="image" />
 
