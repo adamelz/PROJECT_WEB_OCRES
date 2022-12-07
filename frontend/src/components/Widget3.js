@@ -1,5 +1,4 @@
 import React from 'react';
-import Graphique from './Graphique';
 
 
 class Widget3 extends React.Component {
@@ -16,9 +15,7 @@ class Widget3 extends React.Component {
         fetch("http://ergast.com/api/f1/current/last/results.json")
             .then(res => res.json())
             .then(drivers => this.setState({ items: drivers.MRData.RaceTable.Races }))
-        // .then(drivers => console.log(drivers.MRData.RaceTable.Races))
 
-        // .then(drivers => this.map.set({ items: drivers.MRData.DriverTable.Drivers })) 
     }
 
 
@@ -53,8 +50,6 @@ class Widget3 extends React.Component {
 
                 </div >
 
-                {/* <Graphique id="size">
-            </Graphique> */}
             </div>
         );
     }

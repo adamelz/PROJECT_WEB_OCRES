@@ -14,19 +14,13 @@ const Naviagationl = () => {
             <div>
                 <NavLink to="/home">
 
-                    {/* <li> <img id="iconeH" src={image} /> </li> */}
-
-
                     <li>  Home </li>
-
 
                 </NavLink>
 
             </div>
             <div>
                 <NavLink to="/dashboard" >
-
-                    {/* <li> <img id="icone" src={imag} /> </li> */}
 
                     <li>  Dashboard </li>
 
@@ -36,8 +30,6 @@ const Naviagationl = () => {
             <div>
 
                 <NavLink to="/admin" >
-
-                    {/* <li> <img id="icone" src={ima} /> </li> */}
 
                     <li> Administration</li>
 

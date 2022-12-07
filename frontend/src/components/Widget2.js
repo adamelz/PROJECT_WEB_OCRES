@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import React from 'react';
-import axios from 'axios';
 import image from '../assets/img/flag.png'
 
 
@@ -17,8 +15,6 @@ class Widget2 extends React.Component {
     componentDidMount() {
         fetch("http://ergast.com/api/f1/2022/drivers.json")
             .then(res => res.json())
-            //.then(drivers => this.setState({ items: drivers.MRData.DriverTable }))
-            // .then(drivers => console.log(drivers.MRData.DriverTable.Drivers))
             .then(drivers => this.setState({ items: drivers.MRData.DriverTable.Drivers }))
     }
 

@@ -5,8 +5,6 @@ import image from './../assets/img/georgesans.png';
 import ima from './../assets/img/fondG.png';
 import imag from './../assets/img/lewissans.png';
 import im from './../assets/img/fondL.png';
-import Dashboard from '../pages/Dashboard';
-import jsxToString from 'jsx-to-string';
 
 
 class Slider extends React.Component {

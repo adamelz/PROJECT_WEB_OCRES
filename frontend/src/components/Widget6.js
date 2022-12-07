@@ -14,9 +14,7 @@ class Widget6 extends React.Component {
     componentDidMount() {
         fetch(`http://ergast.com/api/f1/2022/22/laps/${lapnum}.json`)
             .then(res => res.json())
-            //.then(elementts => console.log(elementts.MRData.RaceTable.Races))
             .then(drivers => this.setState({ items: drivers.MRData.RaceTable.Races }))
-        // .then(drivers => console.log(drivers.MRData.RaceTable.Races))
     }
 
     render() {

@@ -1,8 +1,6 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
 import Dashboards from '../components/Dashboards';
 import Naviagationl from '../components/Naviagationl';
-import Graphique from '../components/Graphique';
 
 
 

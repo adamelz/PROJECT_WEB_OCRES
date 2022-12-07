@@ -6,9 +6,7 @@ import React from 'react';
 function Widget9() {
 
     const [listOfUsers, setListOfUsers] = useState([]);
-    const [driver, setName] = useState("");
-    const [weightbefore, setAge] = useState(0);
-    const [weightafter, setUsername] = useState(0);
+
 
     useEffect(() => {
         Axios.get("http://localhost:3001/getUsers").then((response) => {
@@ -16,22 +14,6 @@ function Widget9() {
         });
     }, []);
 
-    const createUser = () => {
-        Axios.post("http://localhost:3001/createUser", {
-            driver,
-            weightbefore,
-            weightafter,
-        }).then((response) => {
-            setListOfUsers([
-                ...listOfUsers,
-                {
-                    driver,
-                    weightbefore,
-                    weightafter,
-                },
-            ]);
-        });
-    };
 
     return (
         <div id="w3">

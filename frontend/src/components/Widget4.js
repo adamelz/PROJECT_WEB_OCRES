@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Line, Doughnut, Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, ArcElement, Tooltip, Legend, } from 'chart.js';
 import { affichagestanding } from '../drivers';
-import { affichagedonut } from '../drivers';
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -19,13 +18,11 @@ ChartJS.register(
 const Widget4 = () => {
 
     const [newdata, setNewdata] = useState([]);
-    const [position, setPosition] = useState([]);
 
 
     const fetchApi = async () => {
 
         const newdata = await affichagestanding();
-        const position = await affichagestanding();
         setNewdata(newdata);
         console.log(newdata.map((data) => data[0].year));
 
@@ -43,9 +40,9 @@ const Widget4 = () => {
         labels: newdata.map((data) => data[0].year),
 
         datasets: [{
-            label: "Classement",
+            label: "Standing",
             data: newdata.map((data) => data[0].value),
-            backgroundColor: 'rgb(0, 161, 156)',
+            backgroundColor: 'rgb(0, 161, 156, 0.2)',
             borderColor: 'rgb(0, 161, 156)',
             with: '100%',
             height: '100%',
@@ -65,8 +62,6 @@ const Widget4 = () => {
 
 
             <Line data={datas} options={options}> </Line>
-            {/* <Doughnut data={data} options={options}> </Doughnut> */}
-            {/* <Doughnut className='donuts' data={datas} options={options}> </Doughnut> */}
         </div>
     );
 };

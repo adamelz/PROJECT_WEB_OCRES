@@ -79,65 +79,6 @@ const Dashboards = () => {
             </div>
 
 
-
-
-            {/* <div id='disposition'>
-                <div id='formw12'>
-
-                    <div>
-                         <Widget1>
-                        </Widget1>
-
-                        <Widget6>
-                        </Widget6> 
-                    </div>
-                    <div>
-
-                         <Widget5>
-                        </Widget5>
-
-                        <Widget8>
-                        </Widget8> 
-
-
-
-
-                    </div>
-
-
-                </div>
-
-
-                 <Widget4>
-                </Widget4> 
-
-
-
-            </div>
-
-            <div id='disposition'>
-
-
-                 <Widget2>
-                </Widget2>
-
-
-
-                <Widget3>
-                </Widget3>
-
-                <Widget7>
-                </Widget7>
-
-                <Widget9>
-
-                </Widget9> 
-
-            </div>
-
-
- */}
-
         </div>
     );
 };

@@ -13,9 +13,7 @@ class Widget8 extends React.Component {
     componentDidMount() {
         fetch("http://ergast.com/api/f1/current/constructorStandings.json")
             .then(res => res.json())
-            //.then(elementts => console.log(elementts.MRData.StandingsTable.StandingsLists))
             .then(drivers => this.setState({ items: drivers.MRData.StandingsTable.StandingsLists }))
-        //.then(drivers => console.log(drivers.MRData.StandingsTable.StandingsLists))
     }
 
     render() {

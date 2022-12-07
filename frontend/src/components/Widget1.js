@@ -1,10 +1,5 @@
-import { useEffect, useState } from 'react';
 import React from 'react';
-import axios from 'axios';
 
-
-
-//const Widget1 = (props) => {
 class Widget1 extends React.Component {
 
     constructor() {
@@ -20,14 +15,8 @@ class Widget1 extends React.Component {
             .then(drivers => this.setState({ items: drivers.MRData.RaceTable.Races }))
             .then(drivers => console.log(drivers.MRData.RaceTable.Races))
 
-        // .then(drivers => this.map.set({ items: drivers.MRData.DriverTable.Drivers })) 
     }
 
-
-
-
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     render() {
 

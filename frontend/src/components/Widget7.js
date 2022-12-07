@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Line, Doughnut, Bar } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, ArcElement, Tooltip, Legend, } from 'chart.js';
 import { affichagewins } from '../drivers';
-import { affichagedonut } from '../drivers';
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -42,7 +41,6 @@ const Widget7 = () => {
         datasets: [{
             label: "Wins",
             data: newdata.map((data) => data[0].value),
-            //data: ["8", "12", "3", "9", "8", "12", "9"],
             backgroundColor: 'rgb(0, 161, 156)',
             borderColor: 'rgb(0, 161, 156)',
             with: '100%',
