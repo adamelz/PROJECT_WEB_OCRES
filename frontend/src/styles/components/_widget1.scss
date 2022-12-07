@@ -207,6 +207,17 @@
     border-color: rgba(44, 44, 44, 0.353);
     box-shadow: 10px 10px 1em;
     padding-top: 4%;
+    transition: width 0.4s, height 0.4s, background-color 0.4s, transform 0.4s;
+
+
+}
+
+#w2:hover {
+
+    -ms-transform: scale(1) translate(10px);
+    -webkit-transform: scale(1) translate(10px);
+    transform: scale(1) translate(10px);
+    background-color: #1e1e20;
 
 }
 
@@ -221,6 +232,17 @@
     border-color: rgba(44, 44, 44, 0.353);
     box-shadow: 10px 10px 1em;
     padding-top: 2%;
+    transition: width 0.4s, height 0.4s, background-color 0.4s, transform 0.4s;
+
+
+}
+
+#w3:hover {
+
+    -ms-transform: scale(1) translate(10px);
+    -webkit-transform: scale(1) translate(10px);
+    transform: scale(1) translate(10px);
+    background-color: #1e1e20;
 
 }
 
@@ -237,8 +259,20 @@
     border-color: rgba(44, 44, 44, 0.353);
     box-shadow: 10px 10px 1em;
     padding-top: 4%;
+    transition: width 0.4s, height 0.4s, background-color 0.4s, transform 0.4s;
 
 
+
+
+
+}
+
+#carré:hover {
+
+    -ms-transform: scale(1) translate(10px);
+    -webkit-transform: scale(1) translate(10px);
+    transform: scale(1) translate(10px);
+    background-color: #1e1e20;
 
 }
 
